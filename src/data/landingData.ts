@@ -1,0 +1,170 @@
+import type {
+  NavLink, HeroSlide, ServiceCard,
+  Project, Testimonial, Stat, FooterColumn
+} from '../types';
+
+export const NAV_LINKS: NavLink[] = [
+  { label: 'Home',       href: '/' },
+  { label: 'About',      href: '/about' },
+  { label: 'Projects',   href: '#projects' },
+  { label: 'Activities', href: '#activities' },
+  { label: 'Contact',    href: '#contact' },
+];
+
+export const HERO_SLIDES: HeroSlide[] = [
+  {
+    id:       1,
+    badge:    'Goldsands Group',
+    title:    'Welcome to Our Green Kingdom',
+    subtitle: 'Experience world-class luxury resorts and investment opportunities along the breathtaking Padma riverside.',
+    image:    'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=80',
+    cta:      'Explore Projects',
+    ctaLink:  '#projects',
+  },
+  {
+    id:       2,
+    badge:    'Bay Sands',
+    title:    'Lifetime Halal Income & Facilities',
+    subtitle: 'Own a 5-star hotel suite and enjoy lifelong halal returns and world-class amenities.',
+    image:    'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1920&q=80',
+    cta:      'Learn More',
+    ctaLink:  '#about',
+  },
+  {
+    id:       3,
+    badge:    'Padma Grand Resort',
+    title:    'A Natural Paradise by the Padma',
+    subtitle: 'Situated near the Jazira point of the Padma bridge — recreation and relaxation away from city life.',
+    image:    'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=80',
+    cta:      'Book Now',
+    ctaLink:  '#contact',
+  },
+];
+
+export const SERVICES: ServiceCard[] = [
+  {
+    id:          1,
+    icon:        '🏨',
+    title:       'Hotel',
+    description: 'Premium 5-star hotel suites with guaranteed halal income and world-class hospitality services.',
+    color:       '#1a237e',
+  },
+  {
+    id:          2,
+    icon:        '🏢',
+    title:       'Apartment',
+    description: 'Modern luxury apartments designed for comfortable urban living with premium facilities.',
+    color:       '#C9A84C',
+  },
+  {
+    id:          3,
+    icon:        '🗺️',
+    title:       'Land',
+    description: 'Strategic land plots in prime locations — Cox\'s Bazar, Kuakata, and Padma riverside.',
+    color:       '#0288D1',
+  },
+];
+
+export const PROJECTS: Project[] = [
+  {
+    id:          1,
+    name:        'Padma Grand Resort',
+    location:    'Jazira, Padma Bridge',
+    category:    'Resort',
+    image:       'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80',
+    description: 'Situated near the Jazira point of the Padma bridge alongside the Dhaka-Vanga Expressway, the resort boasts unparalleled natural beauty.',
+    tag:         'Featured',
+  },
+  {
+    id:          2,
+    name:        'Bay Sands Hotel',
+    location:    'Cox\'s Bazar',
+    category:    'Hotel',
+    image:       'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80',
+    description: 'World-class 5-star hotel suites at Cox\'s Bazar — the longest sea beach in the world.',
+    tag:         'New',
+  },
+  {
+    id:          3,
+    name:        'Kuakata Resort',
+    location:    'Kuakata, Bay of Bengal',
+    category:    'Resort',
+    image:       'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80',
+    description: 'A natural paradise in the Bay of Bengal — where the sun rises and sets over the same sea.',
+  },
+  {
+    id:          4,
+    name:        'One City Residences',
+    location:    'Dhaka',
+    category:    'Apartment',
+    image:       'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
+    description: 'Premium urban apartments in the heart of Dhaka with modern amenities and smart living concepts.',
+  },
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    id:      1,
+    name:    'Abu Nasar Md. Badrul Alam',
+    role:    'Share Recuperation Limited',
+    company: 'Investor',
+    avatar:  'https://ui-avatars.com/api/?name=Abu+Nasar&background=1a237e&color=fff&size=80',
+    rating:  5,
+    badge:   'new',
+    text:    'Goldsands Group provided us with the best hotel suite experience. Their service quality and management excellence is truly world-class.',
+  },
+  {
+    id:      2,
+    name:    'Shihab Shariar Khan',
+    role:    'Proprietor, D-Eventz',
+    company: 'Business Partner',
+    avatar:  'https://ui-avatars.com/api/?name=Shihab+Khan&background=C9A84C&color=fff&size=80',
+    rating:  5,
+    badge:   'new',
+    text:    'Goldsands\' projects are bringing beautiful international-standard hotels to Bangladesh. Their investments are highly profitable.',
+  },
+  {
+    id:      3,
+    name:    'Mr. Abdul Mahbud Chowdhury',
+    role:    'Chairman & Coordinator',
+    company: 'LM Partners',
+    avatar:  'https://ui-avatars.com/api/?name=Abdul+Chowdhury&background=0288D1&color=fff&size=80',
+    rating:  5,
+    badge:   'new',
+    text:    'Hotel registration process, coordination and overall transparency at Goldsands is phenomenal. I am very happy with their professionalism.',
+  },
+];
+
+export const STATS: Stat[] = [
+  { id: 1, value: '10+',  label: 'Years Experience',   icon: '🏆' },
+  { id: 2, value: '5000+',label: 'Happy Investors',    icon: '👥' },
+  { id: 3, value: '15+',  label: 'Active Projects',    icon: '🏗️' },
+  { id: 4, value: '3',    label: 'Countries',           icon: '🌍' },
+];
+
+export const FOOTER_COLUMNS: FooterColumn[] = [
+  {
+    title: 'Company',
+    links: [
+      { label: 'Compliance',         href: '#' },
+      { label: 'FAQ',                href: '#' },
+      { label: 'Contact Us',         href: '#contact' },
+    ],
+  },
+  {
+    title: 'Information',
+    links: [
+      { label: 'About Us',           href: '#about' },
+      { label: 'Awards & Recognition',href: '#' },
+      { label: 'Events',             href: '#' },
+    ],
+  },
+  {
+    title: 'Resources',
+    links: [
+      { label: 'Blogs',              href: '#' },
+      { label: 'CSR',                href: '#' },
+      { label: 'Career',             href: '#' },
+    ],
+  },
+];
