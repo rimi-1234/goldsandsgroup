@@ -22,10 +22,9 @@ const TestimonialsSection: React.FC = () => {
               id={`testimonial-card-${t.id}`}
               onClick={() => setActive(idx)}
               className={`gs-card p-6 cursor-pointer transition-all duration-300 animate-fade-up
-                ${active === idx ? 'ring-2 scale-[1.02]' : ''}`}
+                ${active === idx ? 'ring-2 ring-gold-500 scale-[1.02]' : ''}`}
               style={{
                 animationDelay: `${idx * 0.15}s`,
-                ...(active === idx ? { ringColor: '#C9A84C' } : {}),
                 boxShadow: active === idx ? '0 8px 40px rgba(201,168,76,0.25)' : undefined,
               }}
             >
@@ -40,8 +39,7 @@ const TestimonialsSection: React.FC = () => {
               {/* Avatar + name */}
               <div className="flex items-center gap-3 mb-4">
                 <img src={t.avatar} alt={t.name}
-                     className="w-12 h-12 rounded-full object-cover ring-2"
-                     style={{ ringColor: '#C9A84C' }} />
+                     className="w-12 h-12 rounded-full object-cover ring-2 ring-gold-500" />
                 <div>
                   <h4 className="font-bold text-sm" style={{ color: '#1a237e' }}>{t.name}</h4>
                   <p className="text-xs text-gray-400">{t.role}</p>
