@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar       from './components/Navbar';
 import Footer       from './components/Footer';
+import ScrollToTop  from './components/ScrollToTop';
 import LandingPage  from './pages/LandingPage';
 import CareerPage   from './pages/CareerPage';
 
@@ -43,6 +44,7 @@ const App: React.FC = () => (
     </Routes>
 
     <Footer />
+    <ScrollToTop />
   </BrowserRouter>
 );
 
