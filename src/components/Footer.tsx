@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom';
 import { FOOTER_COLUMNS } from '../data/landingData';
 import logoImg from '../assets/image/logo.png';
 import footerBg from '../assets/image/3.jfif';
-import ositLogo from '../assets/image/logo.png'; // reused; swap if OS IT has its own logo
+// import ositLogo from '../assets/image/logo.png'; // reused; swap if OS IT has its own logo
+
 
 const SOCIALS = [
   { id: 'fb', label: 'Facebook', icon: 'f', href: '#', color: '#1877F2' },
@@ -142,10 +143,14 @@ const Footer: React.FC = () => {
               </div>
 
 
-              <div className="flex items-center gap-4">
-                <a href="#" className="text-gray-500 text-xs hover:text-gray-300 transition-colors">Privacy Policy</a>
-                <span className="text-gray-700">|</span>
-                <a href="#" className="text-gray-500 text-xs hover:text-gray-300 transition-colors">Terms of Service</a>
+              <div className="flex flex-col sm:flex-row items-center gap-4">
+                <span className="text-gray-500 text-xs">&copy; {year} Goldsands Group. All rights reserved.</span>
+                <span className="hidden sm:inline text-gray-700">|</span>
+                <div className="flex items-center gap-4">
+                  <a href="#" className="text-gray-500 text-xs hover:text-gray-300 transition-colors">Privacy Policy</a>
+                  <span className="text-gray-700">|</span>
+                  <a href="#" className="text-gray-500 text-xs hover:text-gray-300 transition-colors">Terms of Service</a>
+                </div>
               </div>
             </div>
           </div>
