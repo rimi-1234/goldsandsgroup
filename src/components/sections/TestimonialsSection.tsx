@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { TESTIMONIALS } from '../../data/landingData';
+import testimonialsBg from '../../assets/image/3.jfif';
 
 const TestimonialsSection: React.FC = () => {
   const [active, setActive] = useState<number>(0);
@@ -64,8 +65,8 @@ const TestimonialsSection: React.FC = () => {
         {/* City skyline image — bottom image for testimonials page */}
         <div className="relative rounded-3xl overflow-hidden h-56 md:h-72 img-overlay shadow-card-lg">
           <img
-            src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1600&q=80"
-            alt="City skyline Bangladesh"
+            src={testimonialsBg}
+            alt="Goldsands Padma resort aerial view"
             className="w-full h-full object-cover"
           />
           {/* Blue tint overlay matching the goldsands style */}

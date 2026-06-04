@@ -1,4 +1,5 @@
 import { SERVICES } from '../../data/landingData';
+import servicesImg from '../../assets/image/1.jfif';
 
 const ServicesSection: React.FC = () => (
   <section id="services" className="gs-section bg-white">
@@ -54,11 +55,11 @@ const ServicesSection: React.FC = () => (
         ))}
       </div>
 
-      {/* Bottom image strip — Page 1 bottom image */}
+      {/* Bottom image strip — local resort pool image */}
       <div className="mt-16 rounded-3xl overflow-hidden relative h-64 md:h-80 img-overlay shadow-card-lg">
         <img
-          src="https://images.unsplash.com/photo-1570213489059-0aac6626cade?w=1600&q=80"
-          alt="Goldsands Group resort aerial view"
+          src={servicesImg}
+          alt="Goldsands Group resort pool view"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
@@ -81,3 +82,4 @@ const ServicesSection: React.FC = () => (
 );
 
 export default ServicesSection;
+

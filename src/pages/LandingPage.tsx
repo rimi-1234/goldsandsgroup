@@ -1,30 +1,31 @@
+import { useLocation } from 'react-router-dom';
 import HeroSection        from '../components/sections/HeroSection';
 import ServicesSection    from '../components/sections/ServicesSection';
 import AboutSection       from '../components/sections/AboutSection';
 import StatsSection       from '../components/sections/StatsSection';
 import ProjectsSection    from '../components/sections/ProjectsSection';
+import GallerySection     from '../components/sections/GallerySection';
 import TestimonialsSection from '../components/sections/TestimonialsSection';
+import ContactSection     from '../components/sections/ContactSection';
 
-const LandingPage: React.FC = () => (
-  <main id="landing-page">
-    {/* ── Section 1: Hero (Image 3 — tall building / resort) ─────── */}
-    <HeroSection />
+const LandingPage: React.FC = () => {
+  const location = useLocation();
+  const isAboutPage = location.pathname === '/about';
 
-    {/* ── Section 2: Services + bottom image strip (Image 1) ──────── */}
-    <ServicesSection />
-
-    {/* ── Section 3: About / Who We Are ───────────────────────────── */}
-    <AboutSection />
-
-    {/* ── Section 4: Stats bar ────────────────────────────────────── */}
-    <StatsSection />
-
-    {/* ── Section 5: Projects (Image 3 used in cards) ─────────────── */}
-    <ProjectsSection />
-
-    {/* ── Section 6: Testimonials + city skyline image ─────────────── */}
-    <TestimonialsSection />
-  </main>
-);
+  return (
+    <main id="landing-page" className={isAboutPage ? 'pt-24' : ''}>
+      {!isAboutPage && <HeroSection />}
+      {!isAboutPage && <ServicesSection />}
+      
+      <AboutSection />
+      
+      {!isAboutPage && <StatsSection />}
+      {!isAboutPage && <ProjectsSection />}
+      {!isAboutPage && <GallerySection />}
+      {!isAboutPage && <TestimonialsSection />}
+      {!isAboutPage && <ContactSection />}
+    </main>
+  );
+};
 
 export default LandingPage;

@@ -3,11 +3,25 @@ import type {
   Project, Testimonial, Stat, FooterColumn
 } from '../types';
 
+// ── Local image imports ────────────────────────────────────────────────────
+import img0  from '../assets/image/0.jfif';
+import img1  from '../assets/image/1.jfif';
+import img2  from '../assets/image/2.jfif';
+import img3  from '../assets/image/3.jfif';
+import img4  from '../assets/image/4.jfif';
+import img5  from '../assets/image/5.jfif';
+import img6  from '../assets/image/6.jfif';
+import img7  from '../assets/image/7.jfif';
+import img8  from '../assets/image/8.jfif';
+import img9  from '../assets/image/9.jfif';
+
+export { img0, img1, img2, img3, img4, img5, img6, img7, img8, img9 };
+
 export const NAV_LINKS: NavLink[] = [
   { label: 'Home',       href: '/' },
   { label: 'About',      href: '/about' },
   { label: 'Projects',   href: '#projects' },
-  { label: 'Activities', href: '#activities' },
+  { label: 'Career',     href: '/career' },
   { label: 'Contact',    href: '#contact' },
 ];
 
@@ -17,7 +31,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     badge:    'Goldsands Group',
     title:    'Welcome to Our Green Kingdom',
     subtitle: 'Experience world-class luxury resorts and investment opportunities along the breathtaking Padma riverside.',
-    image:    'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=80',
+    image:    img8,
     cta:      'Explore Projects',
     ctaLink:  '#projects',
   },
@@ -26,7 +40,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     badge:    'Bay Sands',
     title:    'Lifetime Halal Income & Facilities',
     subtitle: 'Own a 5-star hotel suite and enjoy lifelong halal returns and world-class amenities.',
-    image:    'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1920&q=80',
+    image:    img6,
     cta:      'Learn More',
     ctaLink:  '#about',
   },
@@ -35,7 +49,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     badge:    'Padma Grand Resort',
     title:    'A Natural Paradise by the Padma',
     subtitle: 'Situated near the Jazira point of the Padma bridge — recreation and relaxation away from city life.',
-    image:    'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=80',
+    image:    img9,
     cta:      'Book Now',
     ctaLink:  '#contact',
   },
@@ -71,7 +85,7 @@ export const PROJECTS: Project[] = [
     name:        'Padma Grand Resort',
     location:    'Jazira, Padma Bridge',
     category:    'Resort',
-    image:       'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80',
+    image:       img4,
     description: 'Situated near the Jazira point of the Padma bridge alongside the Dhaka-Vanga Expressway, the resort boasts unparalleled natural beauty.',
     tag:         'Featured',
   },
@@ -80,7 +94,7 @@ export const PROJECTS: Project[] = [
     name:        'Bay Sands Hotel',
     location:    'Cox\'s Bazar',
     category:    'Hotel',
-    image:       'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80',
+    image:       img5,
     description: 'World-class 5-star hotel suites at Cox\'s Bazar — the longest sea beach in the world.',
     tag:         'New',
   },
@@ -89,7 +103,7 @@ export const PROJECTS: Project[] = [
     name:        'Kuakata Resort',
     location:    'Kuakata, Bay of Bengal',
     category:    'Resort',
-    image:       'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80',
+    image:       img7,
     description: 'A natural paradise in the Bay of Bengal — where the sun rises and sets over the same sea.',
   },
   {
@@ -97,7 +111,7 @@ export const PROJECTS: Project[] = [
     name:        'One City Residences',
     location:    'Dhaka',
     category:    'Apartment',
-    image:       'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
+    image:       img0,
     description: 'Premium urban apartments in the heart of Dhaka with modern amenities and smart living concepts.',
   },
 ];
