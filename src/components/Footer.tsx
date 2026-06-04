@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 import { FOOTER_COLUMNS } from '../data/landingData';
-import logoImg    from '../assets/image/logo.png';
-import footerBg   from '../assets/image/3.jfif';
-import ositLogo   from '../assets/image/logo.png'; // reused; swap if OS IT has its own logo
+import logoImg from '../assets/image/logo.png';
+import footerBg from '../assets/image/3.jfif';
+import ositLogo from '../assets/image/logo.png'; // reused; swap if OS IT has its own logo
 
 const SOCIALS = [
-  { id: 'fb',  label: 'Facebook',  icon: 'f',  href: '#', color: '#1877F2' },
-  { id: 'ig',  label: 'Instagram', icon: '▶',  href: '#', color: '#E4405F' },
-  { id: 'li',  label: 'LinkedIn',  icon: 'in', href: '#', color: '#0A66C2' },
-  { id: 'yt',  label: 'YouTube',   icon: '▶',  href: '#', color: '#FF0000' },
+  { id: 'fb', label: 'Facebook', icon: 'f', href: '#', color: '#1877F2' },
+  { id: 'ig', label: 'Instagram', icon: '▶', href: '#', color: '#E4405F' },
+  { id: 'li', label: 'LinkedIn', icon: 'in', href: '#', color: '#0A66C2' },
+  { id: 'yt', label: 'YouTube', icon: '▶', href: '#', color: '#FF0000' },
 ];
 
 const Footer: React.FC = () => {
@@ -25,14 +25,14 @@ const Footer: React.FC = () => {
           style={{ filter: 'brightness(0.3) saturate(0.8) hue-rotate(200deg)' }}
         />
         <div className="absolute inset-0"
-             style={{ background: 'linear-gradient(180deg, transparent 0%, #08081a 100%)' }} />
+          style={{ background: 'linear-gradient(180deg, transparent 0%, #08081a 100%)' }} />
       </div>
 
       {/* Main footer body */}
       <div style={{ background: '#08081a' }} className="border-t border-navy-900/60">
         <div className="gs-container py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-            
+
             {/* Brand column */}
             <div className="lg:col-span-2 space-y-6">
               <Link to="/" id="footer-logo" className="flex items-center gap-4 group">
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
                 />
                 <div className="leading-tight">
                   <p className="font-black text-2xl text-white tracking-tight"
-                     style={{ fontFamily: 'Playfair Display,serif' }}>
+                    style={{ fontFamily: 'Playfair Display,serif' }}>
                     GOLDSANDS
                   </p>
                   <p className="text-xs tracking-[0.25em] uppercase font-bold" style={{ color: '#C9A84C' }}>
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
                   </p>
                 </div>
               </Link>
-              
+
               <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
                 Bangladesh's premier hotel development & investment company — building world-class resorts at
                 Cox's Bazar, Kuakata, and along the Padma riverside.
@@ -111,20 +111,36 @@ const Footer: React.FC = () => {
               {/* Language toggle */}
               <div className="flex items-center gap-2">
                 <button id="footer-lang-en"
-                        className="px-4 py-1.5 rounded-full text-xs font-bold text-white border border-white/20
+                  className="px-4 py-1.5 rounded-full text-xs font-bold text-white border border-white/20
                                    hover:border-gold-400 hover:text-gold-400 transition-all duration-200">
                   English
                 </button>
                 <button id="footer-lang-bn"
-                        className="px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-200 shadow"
-                        style={{ background: 'linear-gradient(135deg,#C9A84C,#fde68a)', color: '#08081a' }}>
+                  className="px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-200 shadow"
+                  style={{ background: 'linear-gradient(135deg,#C9A84C,#fde68a)', color: '#08081a' }}>
                   বাংলা
                 </button>
               </div>
+              <div className="py-5 px-6 flex flex-col sm:flex-row items-center justify-center gap-3 lg:text-right border-t lg:border-none border-navy-950/40">
+                <span className="text-gray-500 text-xs font-medium tracking-wide">Prepared by</span>
+                <div className="flex items-center gap-3">
+                  <img
+                    src={ositLogo}
+                    alt="OS IT Solutions Ltd"
+                    className="w-10 h-10 rounded-full object-contain bg-white border border-gold-400/80 shadow"
+                    style={{ padding: '2.5px' }}
+                  />
+                  <span className="text-white text-sm font-black tracking-wide"
+                    style={{
+                      background: 'linear-gradient(135deg,#C9A84C,#fde68a)',
+                      WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text'
+                    }}>
+                    OS IT Solutions Ltd
+                  </span>
+                </div>
+              </div>
 
-              <p className="text-gray-500 text-xs text-center font-medium">
-                © {year} Goldsands Group. All rights reserved.
-              </p>
 
               <div className="flex items-center gap-4">
                 <a href="#" className="text-gray-500 text-xs hover:text-gray-300 transition-colors">Privacy Policy</a>
@@ -134,34 +150,17 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Powered by */}
+          {/* 
           <div className="mt-6 text-center">
             <p className="text-gray-600 text-xs font-semibold">
               Powered by <span className="text-gold-400 font-bold hover:underline cursor-pointer">NETBRIDGE LTD</span>
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* ── Prepared by OS IT Solutions Ltd ─────────────────────────────── */}
-      <div className="py-5 px-6 flex flex-col sm:flex-row items-center justify-center gap-3 border-t border-navy-950/40"
-           style={{ background: 'linear-gradient(90deg,#04040e,#08081a)' }}>
-        <span className="text-gray-500 text-xs font-medium tracking-wide">Prepared by</span>
-        <div className="flex items-center gap-3">
-          <img
-            src={ositLogo}
-            alt="OS IT Solutions Ltd"
-            className="w-10 h-10 rounded-full object-contain bg-white border border-gold-400/80 shadow"
-            style={{ padding: '2.5px' }}
-          />
-          <span className="text-white text-sm font-black tracking-wide"
-                style={{ background: 'linear-gradient(135deg,#C9A84C,#fde68a)',
-                         WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
-                         backgroundClip: 'text' }}>
-            OS IT Solutions Ltd
-          </span>
-        </div>
-      </div>
+
     </footer>
   );
 };
