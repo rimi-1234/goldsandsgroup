@@ -109,7 +109,7 @@ const Footer: React.FC = () => {
           <div className="mt-16 pt-8 border-t" style={{ borderColor: 'rgba(201,168,76,0.15)' }}>
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               {/* Language toggle */}
-              <div className="flex items-center gap-2">
+              {/* <div className="flex items-center gap-2">
                 <button id="footer-lang-en"
                   className="px-4 py-1.5 rounded-full text-xs font-bold text-white border border-white/20
                                    hover:border-gold-400 hover:text-gold-400 transition-all duration-200">
@@ -120,16 +120,16 @@ const Footer: React.FC = () => {
                   style={{ background: 'linear-gradient(135deg,#C9A84C,#fde68a)', color: '#08081a' }}>
                   বাংলা
                 </button>
-              </div>
+              </div> */}
               <div className="py-5 px-6 flex flex-col sm:flex-row items-center justify-center gap-3 lg:text-right border-t lg:border-none border-navy-950/40">
                 <span className="text-gray-500 text-xs font-medium tracking-wide">Prepared by</span>
                 <div className="flex items-center gap-3">
-                  <img
+                  {/* <img
                     src={ositLogo}
                     alt="OS IT Solutions Ltd"
                     className="w-10 h-10 rounded-full object-contain bg-white border border-gold-400/80 shadow"
                     style={{ padding: '2.5px' }}
-                  />
+                  /> */}
                   <span className="text-white text-sm font-black tracking-wide"
                     style={{
                       background: 'linear-gradient(135deg,#C9A84C,#fde68a)',
